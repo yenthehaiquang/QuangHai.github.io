@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src ="images/IU logo.png">
+    <form action="thannkyou.html" method="post">
+        <h1 style="color: blue;">SURVEY</h1>
+        <P> If you have a moment, we'd appreciate if you would fill out this survey.</P>
+        <h1 style="color: blue;"> Your information</h1>
+
+        <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname"><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br>
+            <label for="dob-day">Day of Birth:</label>
+            <label for="dob-day">Day:</label>
+        <select id="dob-day" name="dob-day" required>
+            <option value="">Day</option>
+            <script>
+                for (let i = 1; i <= 31; i++) {
+                    document.write(`<option value="${i}">${i}</option>`);
+                }
+            </script>
+        </select>
+
+        <label for="dob-month">Month:</label>
+        <select id="dob-month" name="dob-month" required>
+            <option value="">Month</option>
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+            </select>
+
+            <label for="dob-year">Year:</label>
+            <select id="dob-year" name="dob-year" required>
+                <option value="">Year</option>
+                <script>
+                    let currentYear = new Date().getFullYear();
+                    for (let i = currentYear; i >= 1900; i--) {
+                        document.write(`<option value="${i}">${i}</option>`);
+                    }
+                </script>
+            </select>
+
+        <br>
+        <h1 style="color: blue;">How did you hear about us?</h1>
+        <input type="radio" id="worldengine" name="worldengine" value="World Engine">
+        <label for="worldengine">World Engine</label>
+        <input type="radio" id="Worldofmouth" name="Worldofmouth" value="World of mouth">
+        <label for="Worldofmouth">World of mouth</label>
+        <input type="radio" id="sm" name="sm" value="Social Media">
+        <label for="sm">Social Media</label>
+        <input type="radio" id ="oth" name="oth" value="Others">
+        <label for="oth">Others</label>
+        <h1 style="color: blue;">Would you like to recieve announcements about new CDs and special offers?</h1>
+        <input type="checkbox" id="ans1" name="vehicle1" value="Yes1">
+        <label for="ans1"> YES, I'd like that.</label><br>
+        <input type="checkbox" id="ans2" name="vehicle2" value="Yes2">
+        <label for="ans2"> YES, please send me email announcements.</label><br>
+
+        <label for="contact-method">Please contact me by:</label>
+        <select id="contact-method" name="contact-method" required>
+            <option value="">Select an option</option>
+            <option value="email or post">Email or Post email</option>
+            <option value="email">Email only</option>
+            <option value="post email">Post email only</option>
+        </select>
+        
+        <br><br>
+        <input type="submit" value="Submit">
+        
+    </form>
+</body>
+</html>
