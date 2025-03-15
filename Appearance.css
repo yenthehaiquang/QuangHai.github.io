@@ -1,0 +1,44 @@
+
+.container {
+    display: flex;
+    margin-top: 0;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    max-width: 960px;
+}
+
+main {
+    flex: 1;
+    text-align: left;
+}
+
+aside {
+    flex: 2;
+    padding: 20px;
+    text-align: left;
+}
+
+footer {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#SPECIAL main {
+    flex: 2;
+    padding: 0;
+    
+}
+
+#SPECIAL aside {
+    flex: 1;
+    padding: 10px;
+}
+#SPECIAL {
+    display: flex;
+}
